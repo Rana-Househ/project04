@@ -1,3 +1,5 @@
+/* Theme Colors */
+
 :root {
     --cream: #fff8ef;
     --pink: #f3dce2;
@@ -16,7 +18,7 @@ body.dark {
     --white: #302833;
 }
 
-/* General Styles */
+/*General Styles*/
 
 * {
     box-sizing: border-box;
@@ -36,7 +38,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Navbar */
+/*Navbar*/
 
 .navbar {
     display: flex;
@@ -46,7 +48,6 @@ body {
     padding: 20px 8%;
     background-color: var(--white);
     transition: background-color 0.3s;
-    
 }
 
 .logo {
@@ -70,7 +71,7 @@ body {
     color: var(--sage);
 }
 
-/* Buttons */
+/*Buttons */
 
 button,
 .main-btn {
@@ -91,7 +92,7 @@ button:hover,
     transform: translateY(-2px);
 }
 
-/* Hero Section */
+/*Hero Section*/
 
 .hero {
     display: flex;
@@ -125,7 +126,7 @@ button:hover,
     border: 5px solid var(--white);
 }
 
-/* Hero Buttons and Social Links */
+/*Hero Buttons and Social Links */
 
 .hero-buttons {
     display: flex;
@@ -175,7 +176,7 @@ button:hover,
     transform: translateY(-3px);
 }
 
-/* General Sections */
+/* General Sections*/
 
 .section {
     padding: 60px 8%;
@@ -187,7 +188,7 @@ button:hover,
     color: var(--sage);
 }
 
-/* Cards */
+/*Cards*/
 
 .card-container {
     display: flex;
@@ -215,7 +216,93 @@ button:hover,
     margin-bottom: 10px;
 }
 
-/* Contact Form */
+/* Professional Experience*/
+
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    text-align: left;
+}
+
+.experience-card h3 {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.experience-company {
+    color: var(--sage);
+    font-weight: 600;
+    margin: 0;
+}
+
+.experience-date {
+    font-size: 14px;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.experience-card p {
+    line-height: 1.8;
+}
+
+body.dark .experience-company {
+    color: var(--sage);
+}
+
+/* Certifications*/
+
+.certifications-intro {
+    max-width: 850px;
+    margin: 0 auto 30px;
+    line-height: 1.9;
+    text-align: center;
+}
+
+.certificate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    text-align: left;
+}
+
+.certificate-card h3 {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.certificate-card p {
+    line-height: 1.8;
+    margin: 0;
+}
+
+.certificate-issuer {
+    font-size: 14px;
+}
+
+.certificate-category {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background-color: var(--pink);
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+body.dark .certificate-category {
+    background-color: var(--sage);
+    color: #211C24;
+}
+
+body.dark .certificate-card {
+    color: var(--text);
+}
+
+/*Contact Form*/
 
 #contact-form {
     display: flex;
@@ -263,7 +350,7 @@ button:hover,
     font-weight: bold;
 }
 
-/* Contact Links */
+/*Contact Links */
 
 .contact-links {
     margin-top: 10px;
@@ -284,7 +371,7 @@ button:hover,
     text-decoration: underline;
 }
 
-/* Project Links */
+/* Project Links*/
 
 #projects .card h3 a {
     color: var(--sage);
@@ -297,7 +384,7 @@ button:hover,
     text-decoration: underline;
 }
 
-/* Footer */
+/* Footer*/
 
 footer {
     padding: 20px;
@@ -306,7 +393,7 @@ footer {
     transition: background-color 0.3s;
 }
 
-/* Dark Mode Details */
+/*Dark Mode Details */
 
 body.dark .card {
     border-color: #485447;
@@ -357,7 +444,7 @@ body.dark .hero-buttons .social-btn:hover {
     color: var(--text);
 }
 
-/* Responsive Design */
+/*Responsive Design: Tablet */
 
 @media (max-width: 900px) {
     .navbar {
@@ -378,6 +465,8 @@ body.dark .hero-buttons .social-btn:hover {
         max-width: 100%;
     }
 }
+
+/* Responsive Design: Mobile*/
 
 @media (max-width: 700px) {
     .navbar {
@@ -430,48 +519,23 @@ body.dark .hero-buttons .social-btn:hover {
         flex: 1 1 auto;
         width: 100%;
     }
-    /* Professional Experience */
 
-.experience-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    text-align: left;
-}
-
-.experience-card h3 {
-    margin: 0;
-    line-height: 1.5;
-}
-
-.experience-company {
-    color: var(--sage);
-    font-weight: 600;
-    margin: 0;
-}
-
-.experience-date {
-    font-size: 14px;
-    opacity: 0.8;
-    margin: 0;
-}
-
-.experience-card p {
-    line-height: 1.8;
-}
-
-body.dark .experience-company {
-    color: var(--sage);
-}
-
-@media (max-width: 700px) {
-    .experience-card h3 {
+    .experience-card h3,
+    .certificate-card h3 {
         font-size: 18px;
     }
 
-    .experience-card p {
+    .experience-card p,
+    .certificate-card p {
         font-size: 14px;
     }
-}
+
+    .certifications-intro {
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .certificate-card {
+        gap: 10px;
+    }
 }
